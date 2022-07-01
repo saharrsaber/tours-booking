@@ -3,28 +3,7 @@ const factory = require('./handlerFactory');
 const Tour = require('./../models/tourModel');
 const appError = require('./../utils/appError');
 
-/* middleware functions checking replaced by database
-// exports.checkID = (req, res, next, val) => {
-//   if (val >= tours.length || val < 0)
-//     return res.status(404).json({
-//       status: 'fail',
-//       data: 'invalid id',
-//     });
 
-//   next();
-// };
-
-// replaced by db
-// exports.checkTourBody = (req, res, next) => {
-//   if (!req.body.name || !req.body.price)
-//     return res.status(400).json({
-//       status: 'fail',
-//       data: 'body format is not correct',
-//     });
-
-//   next();
-// };
-*/
 
 exports.aliasTop5CheapTours = (req, res, next) => {
   req.query.limit = '5';
